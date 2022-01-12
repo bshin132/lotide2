@@ -18,5 +18,24 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 }
 
-assertArraysEqual(['1', '2', '3'], ['1', '2', '3'])
-assertArraysEqual(['1', '2', 3], ['1', '2', '3'])
+const middle = function(array) {
+  if (array.length < 3) {
+    return [];
+  } else {
+    const middleIndex = Math.floor(array.length / 2);
+    if (array.length % 2 === 0) {
+      return [array[middleIndex - 1], array[middleIndex]];
+
+    } else {
+      return [array[middleIndex]]
+    }
+    // }
+
+    // [1,2,3,4,5] / 2 = 2
+    // [1,2,3,4] / 2   = 2
+  }
+
+}
+
+console.log(middle([1, 2, 4])) // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
