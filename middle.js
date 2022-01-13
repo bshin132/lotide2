@@ -29,12 +29,7 @@ const middle = function(array) {
     } else {
       return [array[middleIndex]]
     }
-    // }
-
-    // [1,2,3,4,5] / 2 = 2
-    // [1,2,3,4] / 2   = 2
   }
-
 }
 
 console.log(middle([1, 2, 4])) // => [2, 3]
